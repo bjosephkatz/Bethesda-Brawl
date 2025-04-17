@@ -1,19 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://cknmvyi3s60mv"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_a1nvs"]
-size = Vector2(1280, 720)
+[gd_scene load_steps=4 format=3 uid="uid://cknmvyi3s60mv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a1nvs"]
 size = Vector2(1279, 128)
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2xdjh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xdjh"]
+
 [node name="GameArena" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(640, 360)
-texture = SubResource("PlaceholderTexture2D_a1nvs")
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.501961, 0.501961, 0.501961, 1)
+metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="Platform" type="StaticBody2D" parent="CanvasLayer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Platform"]
 position = Vector2(640, 656)
 shape = SubResource("RectangleShape2D_a1nvs")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Platform"]
+modulate = Color(0, 0, 1, 1)
+position = Vector2(640, 656)
+scale = Vector2(1280, 140)
+texture = SubResource("PlaceholderTexture2D_2xdjh")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+modulate = Color(0, 1, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+scale = Vector2(10, 20)
+shape = SubResource("RectangleShape2D_2xdjh")
