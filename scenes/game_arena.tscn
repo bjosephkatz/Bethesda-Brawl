@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cknmvyi3s60mv"]
+[gd_scene load_steps=11 format=3 uid="uid://cknmvyi3s60mv"]
 
 [ext_resource type="Script" uid="uid://cwseunnqrq5aw" path="res://scripts/player.gd" id="1_2xdjh"]
 [ext_resource type="Script" uid="uid://do2etpbctt7w0" path="res://scenes/player2.gd" id="2_pwy2h"]
@@ -15,8 +15,14 @@ size = Vector2(1279, 134)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xdjh"]
 size = Vector2(79, 154)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_morgh"]
+size = Vector2(53, 127)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pwy2h"]
 size = Vector2(109, 177)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pou1h"]
+size = Vector2(54, 145)
 
 [node name="GameArena" type="Node2D"]
 
@@ -37,11 +43,10 @@ position = Vector2(640, 656)
 scale = Vector2(1280, 140)
 texture = SubResource("PlaceholderTexture2D_2xdjh")
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="." groups=["players"]]
 script = ExtResource("1_2xdjh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-modulate = Color(0, 1, 0, 1)
 position = Vector2(67.5, 94)
 scale = Vector2(79, 154)
 texture = SubResource("PlaceholderTexture2D_a1nvs")
@@ -50,7 +55,14 @@ texture = SubResource("PlaceholderTexture2D_a1nvs")
 position = Vector2(67.5, 94)
 shape = SubResource("RectangleShape2D_2xdjh")
 
-[node name="Player2" type="CharacterBody2D" parent="."]
+[node name="AttackArea" type="Area2D" parent="Player"]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AttackArea"]
+position = Vector2(105, 95)
+shape = SubResource("RectangleShape2D_morgh")
+
+[node name="Player2" type="CharacterBody2D" parent="." groups=["players"]]
 modulate = Color(1, 0, 1, 1)
 script = ExtResource("2_pwy2h")
 
@@ -63,3 +75,13 @@ texture = SubResource("PlaceholderTexture2D_a1nvs")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player2"]
 position = Vector2(761.5, 274.5)
 shape = SubResource("RectangleShape2D_pwy2h")
+
+[node name="AttackArea2" type="Area2D" parent="Player2"]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2/AttackArea2"]
+position = Vector2(704, 272.5)
+shape = SubResource("RectangleShape2D_pou1h")
+
+[connection signal="body_entered" from="Player/AttackArea" to="Player" method="_on_attack_area_body_entered"]
+[connection signal="body_entered" from="Player2/AttackArea2" to="Player2" method="_on_attack_area_2_body_entered"]
