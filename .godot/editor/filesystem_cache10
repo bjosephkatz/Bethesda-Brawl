@@ -1,8 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1744918814
+::res://::1744924864
 icon.svg::CompressedTexture2D/CompressedTexture2D::2414559765987216988::1744841546::1744841571::1::::<><><>0<>0<>030cde97e73a75eddbce82306c854a30<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1744841805
 ::res://characters/::1744841791
-::res://scenes/::1744861100
-game_arena.tscn::PackedScene::5502334094370835881::1744861100::0::1::::<><><>0<>0<><>::
+::res://scenes/::1744924960
+game_arena.tscn::PackedScene::5502334094370835881::1744924960::0::1::::<><><>0<>0<><>::
+player.gd::GDScript::6354434014481511646::1744923771::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ::res://scripts/::1744841798
