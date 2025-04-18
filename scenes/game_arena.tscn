@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cknmvyi3s60mv"]
+[gd_scene load_steps=9 format=3 uid="uid://cknmvyi3s60mv"]
 
 [ext_resource type="Script" uid="uid://cwseunnqrq5aw" path="res://scripts/player.gd" id="1_2xdjh"]
 [ext_resource type="Script" uid="uid://do2etpbctt7w0" path="res://scenes/player2.gd" id="2_pwy2h"]
@@ -6,14 +6,17 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pwy2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a1nvs"]
-size = Vector2(1279, 128)
+size = Vector2(1279, 134)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2xdjh"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_a1nvs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xdjh"]
-size = Vector2(112, 181)
+size = Vector2(79, 154)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pwy2h"]
+size = Vector2(109, 177)
 
 [node name="GameArena" type="Node2D"]
 
@@ -25,7 +28,7 @@ texture = SubResource("PlaceholderTexture2D_pwy2h")
 [node name="Platform" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
-position = Vector2(640, 656)
+position = Vector2(640, 653)
 shape = SubResource("RectangleShape2D_a1nvs")
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform"]
@@ -39,12 +42,12 @@ script = ExtResource("1_2xdjh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 modulate = Color(0, 1, 0, 1)
-position = Vector2(51, 80.5)
-scale = Vector2(112, 181)
+position = Vector2(67.5, 94)
+scale = Vector2(79, 154)
 texture = SubResource("PlaceholderTexture2D_a1nvs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(51, 80.5)
+position = Vector2(67.5, 94)
 shape = SubResource("RectangleShape2D_2xdjh")
 
 [node name="Player2" type="CharacterBody2D" parent="."]
@@ -58,5 +61,5 @@ scale = Vector2(112, 181)
 texture = SubResource("PlaceholderTexture2D_a1nvs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player2"]
-position = Vector2(762, 275)
-shape = SubResource("RectangleShape2D_2xdjh")
+position = Vector2(761.5, 274.5)
+shape = SubResource("RectangleShape2D_pwy2h")
