@@ -5,7 +5,7 @@ const GRAVITY = 600
 const JUMP_FORCE = -400
 const ATTACK_DURATION = 0.2  # seconds
 
-@onready var attack_area = $AttackArea
+@onready var attack_area = $AttackArea2
 
 var is_attacking = false
 var attack_timer = 0.0
@@ -19,7 +19,7 @@ func _physics_process(delta):
 	if is_on_floor() and Input.is_action_just_pressed("jump_p2"):
 		velocity.y = JUMP_FORCE
 
-	if Input.is_action_just_pressed("attack_p2"f) and not is_attacking:
+	if Input.is_action_just_pressed("attack_p2") and not is_attacking:
 		perform_attack()
 
 	if is_attacking:
