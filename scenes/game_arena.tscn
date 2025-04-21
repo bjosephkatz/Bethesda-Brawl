@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cwseunnqrq5aw" path="res://scripts/player.gd" id="1_2xdjh"]
 [ext_resource type="Texture2D" uid="uid://1vmmxlttumst" path="res://Assets/image.jpg" id="2_pou1h"]
-[ext_resource type="Script" uid="uid://do2etpbctt7w0" path="res://scenes/player2.gd" id="2_pwy2h"]
-[ext_resource type="Script" uid="uid://mbc5updnwa4n" path="res://scenes/progress_bar.gd" id="3_1sdb2"]
+[ext_resource type="Script" uid="uid://do2etpbctt7w0" path="res://scripts/player2.gd" id="2_pwy2h"]
+[ext_resource type="Script" uid="uid://mbc5updnwa4n" path="res://scripts/progress_bar.gd" id="3_1sdb2"]
 [ext_resource type="Texture2D" uid="uid://cys5lfqct2y80" path="res://Assets/him-removebg-preview.png" id="3_morgh"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pwy2h"]
@@ -82,7 +82,7 @@ offset_right = 87.5
 offset_bottom = 33.0
 rotation = 1.5708
 theme_override_styles/fill = SubResource("StyleBoxFlat_1sdb2")
-value = 50.0
+value = 15.0
 show_percentage = false
 script = ExtResource("3_1sdb2")
 
