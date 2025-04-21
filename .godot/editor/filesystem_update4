@@ -1,1 +1,3 @@
 res://scenes/game_arena.tscn
+res://scripts/player.gd
+res://scenes/player2.gd

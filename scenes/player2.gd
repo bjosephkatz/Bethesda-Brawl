@@ -39,11 +39,10 @@ func end_attack():
 	is_attacking = false
 	attack_area.monitoring = false
 
-func _on_AttackArea_body_entered(body):
-	if body.is_in_group("players") and body != self:
-		print("Hit: ", body.name)
-		# TODO: Add health/damage logic here
+
 
 
 func _on_attack_area_2_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.is_in_group("players") and body != self:
+		print("Hit: ", body.name)
+		# TODO: Add health/damage logic here

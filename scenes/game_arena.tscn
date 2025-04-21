@@ -1,6 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cknmvyi3s60mv"]
 
 [ext_resource type="Script" uid="uid://cwseunnqrq5aw" path="res://scripts/player.gd" id="1_2xdjh"]
+[ext_resource type="Texture2D" uid="uid://1vmmxlttumst" path="res://Assets/image.jpg" id="2_pou1h"]
 [ext_resource type="Script" uid="uid://do2etpbctt7w0" path="res://scenes/player2.gd" id="2_pwy2h"]
 [ext_resource type="Texture2D" uid="uid://cys5lfqct2y80" path="res://Assets/him-removebg-preview.png" id="3_morgh"]
 
@@ -11,19 +12,17 @@ size = Vector2(1279, 134)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2xdjh"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_a1nvs"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xdjh"]
 size = Vector2(79, 154)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_morgh"]
-size = Vector2(105.5, 157)
+size = Vector2(116, 157)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pwy2h"]
-size = Vector2(99, 177)
+size = Vector2(97, 177)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pou1h"]
-size = Vector2(0.60635, 5.76821)
+size = Vector2(0.666653, 5.76821)
 
 [node name="GameArena" type="Node2D"]
 
@@ -50,9 +49,9 @@ scale = Vector2(2, 2)
 script = ExtResource("1_2xdjh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(67.5, 94)
-scale = Vector2(79, 154)
-texture = SubResource("PlaceholderTexture2D_a1nvs")
+position = Vector2(67.15, 96.85)
+scale = Vector2(0.0326857, 0.0500971)
+texture = ExtResource("2_pou1h")
 
 [node name="Player1Collision" type="CollisionShape2D" parent="Player"]
 position = Vector2(67.5, 96)
@@ -62,7 +61,7 @@ shape = SubResource("RectangleShape2D_2xdjh")
 monitoring = false
 
 [node name="Player1Attack" type="CollisionShape2D" parent="Player/AttackArea"]
-position = Vector2(66.25, 96)
+position = Vector2(71.5, 96)
 shape = SubResource("RectangleShape2D_morgh")
 
 [node name="Player2" type="CharacterBody2D" parent="." groups=["players"]]
@@ -75,7 +74,7 @@ scale = Vector2(0.309941, 0.237311)
 texture = ExtResource("3_morgh")
 
 [node name="Player2Collsion" type="CollisionShape2D" parent="Player2"]
-position = Vector2(790, 369)
+position = Vector2(790.5, 369)
 shape = SubResource("RectangleShape2D_pwy2h")
 
 [node name="AttackArea2" type="Area2D" parent="Player2"]
@@ -83,7 +82,7 @@ scale = Vector2(299.129, -30.0849)
 monitoring = false
 
 [node name="Player2Attack" type="CollisionShape2D" parent="Player2/AttackArea2"]
-position = Vector2(2.63599, -12.3151)
+position = Vector2(2.64769, -12.4315)
 scale = Vector2(0.997922, 1.08911)
 shape = SubResource("RectangleShape2D_pou1h")
 
