@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Bethesda Brawl"
-run/main_scene="uid://cknmvyi3s60mv"
+run/main_scene="uid://borhhnqu83cx5"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

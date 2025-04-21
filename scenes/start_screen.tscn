@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://borhhnqu83cx5"]
+
+[ext_resource type="Script" uid="uid://bv56vet20rvaw" path="res://start_screen.gd" id="1_tx5wa"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tx5wa")
+
+[node name="StartLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -28.0
+offset_top = -114.0
+offset_right = 114.0
+offset_bottom = -76.0
+scale = Vector2(2, 2)
+text = "Bethesda Brawl"
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -2.0
+offset_right = 190.0
+offset_bottom = 86.0
+text = "Start"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(92, 53)
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
