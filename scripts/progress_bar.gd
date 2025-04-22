@@ -9,4 +9,4 @@ func _ready():
 	print("Health bar initialized. Max:", max_health)
 
 func set_health(current_health: int) -> void:
-	value = current_health
+	value = clamp(current_health, min_value, max_value)
