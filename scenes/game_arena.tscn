@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=3 uid="uid://cknmvyi3s60mv"]
 
 [ext_resource type="Script" uid="uid://cwseunnqrq5aw" path="res://scripts/player.gd" id="1_2xdjh"]
-[ext_resource type="Texture2D" uid="uid://1vmmxlttumst" path="res://Assets/image.jpg" id="2_pou1h"]
-[ext_resource type="Script" uid="uid://do2etpbctt7w0" path="res://scripts/player2.gd" id="2_pwy2h"]
+[ext_resource type="Texture2D" uid="uid://1vmmxlttumst" path="res://assets/image.jpg" id="2_pou1h"]
+[ext_resource type="Script" path="res://scripts/player2.gd" id="2_pwy2h"]
 [ext_resource type="Script" uid="uid://mbc5updnwa4n" path="res://scripts/progress_bar.gd" id="3_1sdb2"]
-[ext_resource type="Texture2D" uid="uid://cys5lfqct2y80" path="res://Assets/him-removebg-preview.png" id="3_morgh"]
+[ext_resource type="Texture2D" uid="uid://cys5lfqct2y80" path="res://assets/him-removebg-preview.png" id="3_morgh"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pwy2h"]
 
@@ -73,7 +73,7 @@ shape = SubResource("RectangleShape2D_morgh")
 scale = Vector2(2, 2)
 transform = Transform2D(2, 0, 0, 2, 0, 0)
 
-[node name="ProgressBar" type="ProgressBar" parent="Player"]
+[node name="HealthBar" type="ProgressBar" parent="Player"]
 modulate = Color(0.93146, 0.877021, 0.883917, 1)
 self_modulate = Color(0.988529, 0.752453, 0.821347, 1)
 offset_left = 83.5
