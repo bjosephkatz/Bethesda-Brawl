@@ -1,4 +1,11 @@
+.DS_Store
 .import/
 .export/
 export.cfg
 export_presets.cfg
+.godot/editor/
+.godot/imported/
+*.pck
+*.exe
+*.apk
+*.zip
