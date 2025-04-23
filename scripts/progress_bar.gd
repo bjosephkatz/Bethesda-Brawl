@@ -10,3 +10,4 @@ func _ready():
 
 func set_health(current_health: int) -> void:
 	value = clamp(current_health, min_value, max_value)
+	print(current_health)
